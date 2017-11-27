@@ -8,6 +8,14 @@
 
 \ProcessKeyvalOptions*
 
+\newdimen\asterism@width
+% asterism is character which consists of three asterisks layed out as a triangel
+\newcommand\asterism{%
+  \settowidth{\asterism@width}{*}%
+  % these values were found by trial and error
+  *\kern-.6\asterism@width\raise.7\asterism@width\hbox{*}\kern-.6\asterism@width*%
+}
+
 \newcommand\pre@sectionbreak{\par\vskip\sectionbreak@preskip\relax}
 \newcommand\post@sectionbreak{\par\vskip\sectionbreak@postskip\relax}
 % print centered section break mark
@@ -27,5 +35,9 @@
 \newcommand\sectionbreakmark[1]{%
   \gdef\sectionbreak@mark{#1}%
 }
+
+\ifsectionbreak@asterism
+\sectionbreakmark{\asterism}
+\fi
 
 \endinput
