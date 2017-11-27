@@ -1,20 +1,24 @@
 % přesunout do ~/texexamples/packages
 \documentclass{article}
 \usepackage[mark=***]{sectionbreak}
+\usepackage{hyperref}
 \usepackage{lipsum}
+\providecommand{\tightlist}{%
+    \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \begin{document}
-\lipsum[1-3]
+\input{readme.tex}
+% \lipsum[1-3]
 
-\sectionbreak[!!!]
+% \sectionbreak[!!!]
 
-\lipsum[5-7]
+% \lipsum[5-7]
 
-\sectionbreak
+% \sectionbreak
 
-\lipsum[1-2]
-\sectionbreakmark{\rule{10em}{3pt}}
-\sectionbreak
+% \lipsum[1-2]
+% \sectionbreakmark{\rule{10em}{3pt}}
+% \sectionbreak
 
-\lipsum[6-8]
+% \lipsum[6-8]
 \end{document}
