@@ -1,12 +1,11 @@
 \NewConfigure{sectionbreak}{2}
-
-%\let\orig:sectiobreak\sectionbreak
-    
-
+\NewConfigure{asterism}{1}
 
 \renewcommand\sectionbreak[1][\sectionbreak@mark]{%
   \a:sectionbreak\bgroup\sectionbreak@style #1\egroup\b:sectionbreak%
 }
+
+\renewcommand\asterism{\a:asterism}
 
 \Configure{sectionbreak}{\ifvmode\IgnorePar\fi\EndP\HCode{<div class="sectionbreak">}}{\HCode{</div>}}
 
@@ -15,3 +14,7 @@
   margin-bottom:3rem;
   text-align:center;
 }}
+
+% use the asterism HTML entity
+\Configure{asterism}{\HCode{\string&\:sharp8258;}}
+
