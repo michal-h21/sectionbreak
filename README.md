@@ -2,7 +2,7 @@
 
 This package provides LaTeX support for section breaks, used mainly in fiction
 books to signal changes in a story, like changes in time, location, etc.
-(Source: [Wikipedia](https://en.wikipedia.org/wiki/Section_(typography)).
+(Source: [Wikipedia](https://en.wikipedia.org/wiki/Section_(typography))).
 
 
 ## Package options
