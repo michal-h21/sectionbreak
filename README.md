@@ -11,6 +11,9 @@ There are several options:
 
 - `mark` -- characters printed in the center of the section break. It is space
   by default, common value might be `***` for example.
+- `asterism` -- request
+  [asterism](https://en.wikipedia.org/wiki/Asterism_(typography)) as a section
+  mark.
 - `preskip` -- Amount of space printed before the section mark. It should be
   dimension unit supported by TeX.
 - `postskip` -- Similar to `preskip`, but it is a space printed after the
