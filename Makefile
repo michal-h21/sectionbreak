@@ -7,9 +7,10 @@ readme = README.md
 examplefile = sectionbreak-example
 exampletex = $(examplefile).tex
 examplepdf = $(examplefile).pdf
+examplepng = $(examplefile).png
 mode = draft
 	
-all: $(pdffile) $(htmlfile) $(examplepdf)
+all: $(pdffile) $(htmlfile) $(examplepdf) $(examplepng)
 
 $(pdffile): $(texfile) $(readme) sectionbreak.sty
 	lualatex  $<
@@ -19,6 +20,9 @@ $(htmlfile): $(texfile) $(readme) sectionbreak.sty sectionbreak.4ht
 
 $(examplepdf): $(exampletex) sectionbreak.sty
 	lualatex $<
+
+$(examplepng): $(examplepdf)
+	gs -sDEVICE=pngalpha -sOutputFile=$@ -r144 $<
 
 # $(readmetex): $(readme)
 # 	pandoc -o $@ $<
