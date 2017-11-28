@@ -1,14 +1,18 @@
 % přesunout do ~/texexamples/packages
-\documentclass{article}
+\documentclass[12pt]{article}
+\usepackage{luatex85}
+\usepackage[paperwidth=30em, paperheight=26em,margin=2em]{geometry}
+\parindent=0pt
 % \usepackage[***,postskip=1em,preskip=1em]{sectionbreak}
 \usepackage[asterism]{sectionbreak}
+\pagestyle{empty}
 
 \begin{document}
 
 Section separated by three asterisk marks
 \sectionbreak[!!!]
 
-Section separated by asterism section mark requested in \verb|\usepackage|.
+Section separated by asterism section mark requested in\\ \texttt{\textbackslash usepackage}.
 \sectionbreak
 
 Section separated by a rule.
