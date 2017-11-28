@@ -7,20 +7,55 @@ books to signal changes in a story, like changes in time, location, etc.
 
 ## Package options
 
-There are several options:
+There are several package options:
 
-- `mark` -- characters printed in the center of the section break. It is space
-  by default, common value might be `***` for example.
-- `asterism` -- request
-  [asterism](https://en.wikipedia.org/wiki/Asterism_(typography)) as a section
-  mark.
-- `preskip` -- Amount of space printed before the section mark. It should be
-  dimension unit supported by TeX.
-- `postskip` -- Similar to `preskip`, but it is a space printed after the
-  section mark.
-- `style` -- LaTeX commands for font style change, like `\bfseries`, for example.
+`mark`
+
+:  characters printed in the center of the section break. It is space by default, common value might be `***` for example.
+
+`asterism`  
+
+:  request [asterism](https://en.wikipedia.org/wiki/Asterism_(typography)) as a section mark.
+
+`preskip` 
+
+:  Amount of space printed before the section mark. It should be dimension unit supported by TeX.
+
+`postskip`
+
+:   Similar to `preskip`, but it is a space printed after the section mark.
+
+`style` 
+
+:  LaTeX commands for font style change, like `\bfseries`, for example.
 
 ## Commands
+
+`\sectionbreak[<mark>]`
+
+:  print the section break. Optional argument can contain content which should be printed in the break center.
+
+`\sectionbreakmark{<mark>}`
+
+:  set the content printed in the following `\sectionbreak` commands.
+
+`\asterism`
+
+:  print the asterism (\asterism) symbol.
+
+## `tex4ht` support
+
+The `sectionbreak` package has support for `tex4ht`, in order to enable a
+correct conversion to HTML or other formats supported by this conversion
+system. It provides the following configurations:
+
+`\Configure{sectionbreak}{code inserted before the section break mark}{code inserted after}`
+
+:  this configuration can be used for insertion of a box around the section break mark, which can be styled using CSS to print the blank space around the content. 
+
+`\Configure{asterism}{code which replaces the asterism symbol}`
+
+:  the asterism symbol is configured to use Unicode for it's rendering by default. This method might be unsupported by some devices like e-Ink readers, so it is possible to set a different code using this configuration.
 
 # Example
 
