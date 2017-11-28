@@ -67,7 +67,7 @@ system. It provides the following configurations:
     Section separated by three asterisk marks
     \sectionbreak[!!!]
     
-    Section separated by asterism section mark requested in\\ \texttt{\textbackslash usepackage}.
+    Section separated by asterism section mark requested in \texttt{\textbackslash usepackage}.
     \sectionbreak
     
     Section separated by a rule.
@@ -78,6 +78,19 @@ system. It provides the following configurations:
     \end{document}
 
 % <img src="https://raw.githubusercontent.com/michal-h21/sectionbreak/master/sectionbreak-example.png" >
+
+% <!--
+
+Section separated by three asterisk marks
+\sectionbreak[!!!]
+
+Section separated by asterism section mark requested in \texttt{\textbackslash usepackage}.
+\sectionbreak
+
+Section separated by a rule.
+\sectionbreakmark{\rule{10em}{3pt}}
+\sectionbreak
+% -->
 
 # License
 
