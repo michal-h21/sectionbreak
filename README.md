@@ -59,7 +59,7 @@ system. It provides the following configurations:
 
 # Example
 
-% <img src="https://raw.githubusercontent.com/michal-h21/sectionbreak/master/sectionbreak-example.png />
+% <img src="https://raw.githubusercontent.com/michal-h21/sectionbreak/master/sectionbreak-example.png" >
 
 # License
 
