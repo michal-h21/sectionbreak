@@ -59,6 +59,24 @@ system. It provides the following configurations:
 
 # Example
 
+
+    \documentclass[12pt]{article}
+    \usepackage[asterism]{sectionbreak}
+    \begin{document}
+    
+    Section separated by three asterisk marks
+    \sectionbreak[!!!]
+    
+    Section separated by asterism section mark requested in\\ \texttt{\textbackslash usepackage}.
+    \sectionbreak
+    
+    Section separated by a rule.
+    \sectionbreakmark{\rule{10em}{3pt}}
+    \sectionbreak
+    
+    
+    \end{document}
+
 % <img src="https://raw.githubusercontent.com/michal-h21/sectionbreak/master/sectionbreak-example.png" >
 
 # License
