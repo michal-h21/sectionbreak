@@ -43,13 +43,13 @@ There are several package options:
 
 :  print the asterism (\asterism) symbol.
 
-## `tex4ht` support
+## The `tex4ht` support
 
 The `sectionbreak` package has support for `tex4ht`, in order to enable a
 correct conversion to HTML or other formats supported by this conversion
 system. It provides the following configurations:
 
-`\Configure{sectionbreak}{code inserted before the section break mark}{code inserted after}`
+`\Configure{sectionbreak}{before section break }{after section}`
 
 :  this configuration can be used for insertion of a box around the section break mark, which can be styled using CSS to print the blank space around the content. 
 
@@ -94,8 +94,11 @@ Section separated by a rule.
 
 # License
 
-
+%<!-- 
+\parintent=0pt
+% -->
 > sectionbreak
+
 > Copyright 2017 Michal Hoftich
 >
 > This work may be distributed and/or modified under the
