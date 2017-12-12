@@ -1,0 +1,11 @@
+local function readvar (cmd)
+  local cmd = io.popen(cmd)
+  local result = cmd:read("*all")
+  cmd:close()
+  return result
+end
+
+
+local version = readvar("git --no-pager describe --abbrev=0 --tags --always ")
+local date = readvar("git --no-pager show --date=short --format='%ad' --name-only")
+settings.packages =string.format('\\def\\gitdate{%s}\\def\\version{%s}', date, version)
