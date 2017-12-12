@@ -19,7 +19,7 @@ There are several package options:
 
 `preskip` 
 
-:  Amount of space printed before the section mark. It should be dimension unit supported by TeX.
+:  Amount of space printed before the section mark. It should be a dimension unit supported by TeX.
 
 `postskip`
 
