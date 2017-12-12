@@ -1,10 +1,17 @@
 % přesunout do ~/texexamples/packages
-\documentclass{article}
+\documentclass[a4page]{ltxdoc}
+\usepackage{luatex85}
+\usepackage[top=2cm, left=2.5cm, right=2.5cm,bottom=3cm]{geometry}
+\usepackage[english]{babel}
 \usepackage[asterism]{sectionbreak}
 \usepackage[definitionLists=true,hybrid=true]{markdown}
+\usepackage{fontspec}
+\usepackage{microtype}
+\setmainfont{TeX Gyre Schola}
 \begin{document}
 \title{The \texttt{sectionbreak} package}
 \author{Michal Hoftich}
+\maketitle
 \markdownInput{README.md}
 % \lipsum[1-3]
 
