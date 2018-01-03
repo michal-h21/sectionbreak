@@ -13,7 +13,7 @@
 \newcommand\asterism{%
   \settowidth{\asterism@width}{*}%
   % these values were found by trial and error
-  *\kern-.6\asterism@width\raise.7\asterism@width\hbox{*}\kern-.6\asterism@width*%
+  \raise-0.6\asterism@width\hbox{*\kern-.6\asterism@width\raise.7\asterism@width\hbox{*}\kern-.6\asterism@width*}%
 }
 
 \newcommand\pre@sectionbreak{\par\vskip\sectionbreak@preskip\relax}
