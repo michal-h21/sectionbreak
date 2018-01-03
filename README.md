@@ -64,7 +64,7 @@ conversion system. It provides the following configurations:
     \usepackage[asterism]{sectionbreak}
     \begin{document}
     
-    Section separated by three asterisk marks
+    Section separated by three exclamation marks.
     \sectionbreak[!!!]
     
     Section separated by asterism section mark requested in \texttt{\textbackslash usepackage}.
@@ -81,7 +81,7 @@ conversion system. It provides the following configurations:
 
 % <!--
 
-Section separated by three asterisk marks
+Section separated by three exclamation marks.
 \sectionbreak[!!!]
 
 Section separated by asterism section mark requested in \texttt{\textbackslash usepackage}.
