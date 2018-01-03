@@ -45,9 +45,9 @@ There are several package options:
 
 ## The `tex4ht` support
 
-The `sectionbreak` package has support for `tex4ht`, in order to enable a
-correct conversion to HTML or other formats supported by this conversion
-system. It provides the following configurations:
+The `sectionbreak` package has support for `tex4ht`, so it is possible to use
+this package in conversion to `HTML` or other formats supported by this
+conversion system. It provides the following configurations:
 
 `\Configure{sectionbreak}{before section break }{after section}`
 
