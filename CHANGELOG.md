@@ -1,2 +1,5 @@
+- 2018/01/03 Version 0.1b
+    - Fixed vertical position of the `\asterism` symbol
+    - Small fixes in the documentation
 - 2018/01/03 Version 0.1a
     - Initial version
