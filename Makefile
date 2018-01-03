@@ -1,10 +1,11 @@
-.PHONY: build
+.PHONY: build tags
 
 packagename = sectionbreak
 docfile = sectionbreak-doc
 texfile = $(docfile).tex
 pdffile = $(docfile).pdf
 htmlfile = $(docfile).html
+
 readme = README.md
 # readmetex = readme.tex
 examplefile = $(packagename)-example
@@ -22,7 +23,10 @@ DATE:= $(firstword $(shell git --no-pager show --date=short --format="%ad" --nam
 	
 all: $(pdffile) $(htmlfile) $(examplepdf) $(examplepng)
 
-$(pdffile): $(texfile) $(readme) sectionbreak.sty
+tags:
+	git fetch --tags
+
+$(pdffile): $(texfile) $(readme) sectionbreak.sty 
 	lualatex  "\def\version{${VERSION}}\def\gitdate{${DATE}}\input{$<}"
 
 $(htmlfile): $(texfile) $(readme) sectionbreak.sty sectionbreak.4ht $(docfile).mk4
@@ -34,10 +38,10 @@ $(examplepdf): $(exampletex) sectionbreak.sty
 $(examplepng): $(examplepdf)
 	gs -sDEVICE=pngalpha -sOutputFile=$@ -r144 $<
 
-build: $(pdffile) $(readme) $(styfile) $(exampletex)
+build: tags $(pdffile) $(readme) $(styfile) $(exampletex) 
 	@rm -rf $(BUILD_DIR)
 	@mkdir -p $(DIST_DIR)
-	@cp $(pdffile) $(texfile) $(styfile) $(exampletex) $(DIST_DIR)
+	@cp $(pdffile) $(texfile) $(styfile) $(exampletex) $(readme) $(DIST_DIR) 
 	@cd $(BUILD_DIR) && zip -r $(packagename).zip $(packagename)
 # $(readmetex): $(readme)
 # 	pandoc -o $@ $<
