@@ -10,6 +10,8 @@
 \usepackage{hyperref}
 \setmainfont{TeX Gyre Schola}
 \setmonofont{Inconsolata}[Scale=MatchLowercase]
+\ifdefined\version\else\def\version{undefined}\fi
+\ifdefined\gitdate\else\def\gitdate{undefined}\fi
 \begin{document}
 \title{The \texttt{sectionbreak} package\footnote{Version \version}}
 \author{Michal Hoftich}
