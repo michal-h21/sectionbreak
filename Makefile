@@ -21,7 +21,10 @@ DIST_DIR = $(BUILD_DIR)/$(packagename)
 VERSION:= $(shell git --no-pager describe --abbrev=0 --tags --always )
 # VERSION:= $(shell git describe --abbrev=4 --dirty --always --tags)
 DATE:= $(firstword $(shell git --no-pager show --date=short --format="%ad" --name-only))
+
+STYDATE = $(patsubst -,/,$(DATE))
 	
+
 all: $(pdffile) $(htmlfile) $(examplepdf) $(examplepng)
 
 tags:
@@ -42,7 +45,7 @@ $(examplepng): $(examplepdf)
 build: tags $(pdffile) $(readme) $(styfile) $(exampletex) $(changelog)
 	@rm -rf $(BUILD_DIR)
 	@mkdir -p $(DIST_DIR)
-	@cat $(styfile)  | sed -e "s/{version}/${VERSION}/" | sed -e "s/{date}/${DATE}/" > $(DIST_DIR)/$(styfile)
+	@cat $(styfile)  | sed -e "s/{version}/${VERSION}/" | sed -e "s/{date}/${STYDATE}/" > $(DIST_DIR)/$(styfile)
 	@cp $(pdffile) $(texfile)  $(exampletex) $(readme) $(changelog) $(DIST_DIR) 
 	@cd $(BUILD_DIR) && zip -r $(packagename).zip $(packagename)
 # $(readmetex): $(readme)
