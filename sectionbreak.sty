@@ -8,6 +8,7 @@
 \DeclareStringOption[\relax]{style}
 \DeclareStringOption[~]{mark}
 \DeclareBoolOption{asterism}
+\DeclareBoolOption{disable}
 
 \ProcessKeyvalOptions*
 
@@ -49,6 +50,11 @@
 % test the asterism option and set the section mark accordingly
 \ifsectionbreak@asterism
   \sectionbreakmark{\asterism}
+\fi
+
+% disable the section break in the document with the `disable` option
+\ifsectionbreak@disable%
+  \renewcommand\sectionbreak[1][]{}%
 \fi
 
 \endinput

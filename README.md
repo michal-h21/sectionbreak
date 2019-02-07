@@ -9,6 +9,10 @@ books to signal changes in a story, like changes in time, location, etc.
 
 There are several package options:
 
+`disable`
+
+:  disable section break printing.
+
 `mark`
 
 :  characters printed in the center of the section break. It is space by default, common value might be `***` for example.

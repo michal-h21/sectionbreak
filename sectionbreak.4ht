@@ -1,9 +1,11 @@
 \NewConfigure{sectionbreak}{2}
 \NewConfigure{asterism}{1}
 
+\ifsectionbreak@disable\else% don't redefine the \sectionbreak command if the `disable` option is used
 \renewcommand\sectionbreak[1][\sectionbreak@mark]{%
   \a:sectionbreak\bgroup\sectionbreak@style #1\egroup\b:sectionbreak%
 }
+\fi
 
 \renewcommand\asterism{\a:asterism}
 
