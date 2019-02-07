@@ -1,9 +1,9 @@
 % This is file sectionbreak.sty
 %% (c) 2017--2018 Michal Hoftich
 \ProvidesPackage{sectionbreak}[{date} {version} (Michal Hoftich)]
-\usepackage{kvoptions}
-\DeclareStringOption[2em]{preskip}
-\DeclareStringOption[2em]{postskip}
+\RequirePackage{kvoptions}
+\DeclareStringOption[\relax]{preskip}
+\DeclareStringOption[\relax]{postskip}
 \DeclareStringOption[\relax]{skip}
 \DeclareStringOption[\relax]{style}
 \DeclareStringOption[~]{mark}
@@ -15,8 +15,23 @@
 % the skip option can be used to set both preskip and postskip
 
 \if\sectionbreak@skip\relax\else%
-  \def\sectionbreak@preskip{\sectionbreak@skip}%
-  \def\sectionbreak@postskip{\sectionbreak@skip}%
+  % set skips only if the options haven't been used
+  \if\sectionbreak@preskip\relax% 
+    \def\sectionbreak@preskip{\sectionbreak@skip}%
+  \fi%
+  \if\sectionbreak@postskip\relax%
+    \def\sectionbreak@postskip{\sectionbreak@skip}%
+  \fi%
+\fi
+
+% add default value for preskip
+\if\sectionbreak@preskip\relax%
+  \def\sectionbreak@preskip{2em}%
+\fi
+
+% add default value for postskip
+\if\sectionbreak@postskip\relax%
+  \def\sectionbreak@postskip{2em}%
 \fi
 
 \newdimen\asterism@width
