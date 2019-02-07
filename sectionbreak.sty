@@ -4,11 +4,19 @@
 \usepackage{kvoptions}
 \DeclareStringOption[2em]{preskip}
 \DeclareStringOption[2em]{postskip}
+\DeclareStringOption[\relax]{skip}
 \DeclareStringOption[\relax]{style}
 \DeclareStringOption[~]{mark}
 \DeclareBoolOption{asterism}
 
 \ProcessKeyvalOptions*
+
+% the skip option can be used to set both preskip and postskip
+
+\if\sectionbreak@skip\relax\else%
+  \def\sectionbreak@preskip{\sectionbreak@skip}%
+  \def\sectionbreak@postskip{\sectionbreak@skip}%
+\fi
 
 \newdimen\asterism@width
 % asterism is character which consists of three asterisks layed out as a triangel

@@ -25,6 +25,10 @@ There are several package options:
 
 :   Similar to `preskip`, but it is a space printed after the section mark.
 
+`skip`
+
+:   Set both `preskip` and `postskip` to the same value.
+
 `style` 
 
 :  LaTeX commands for font style change, like `\bfseries`, for example.
