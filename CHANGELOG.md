@@ -1,3 +1,5 @@
+- 2018/01/03 
+    - fixed `Inconsolata` font name in the documentation
 - 2018/01/03 version 0.1c
     - added copyright and version info to the `sectionbreak.sty` file
     - fixed small errors in the documentation
