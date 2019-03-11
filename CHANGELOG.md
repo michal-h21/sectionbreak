@@ -1,4 +1,6 @@
-- 2018/01/03 
+- 2019/03/11 version 0.1d
+    - fix for the Microtype error in the frozen TL 2018
+- 2019/02/07 
     - fixed `Inconsolata` font name in the documentation
     - added `skip` option
     - added `disable` option
