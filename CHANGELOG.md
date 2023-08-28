@@ -1,3 +1,5 @@
+- 2023/08/28
+    - fixed Unicode character for the asterism character in \TeX4ht output.
 - 2019/03/11 version 0.1d
     - fix for the Microtype error in the frozen TL 2018
 - 2019/02/07 

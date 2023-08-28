@@ -18,5 +18,5 @@
 }}
 
 % use the asterism HTML entity
-\Configure{asterism}{\HCode{\string&\:sharp8258;}}
+\Configure{asterism}{\special{t4ht@+&{35}x2042;}x}
 
